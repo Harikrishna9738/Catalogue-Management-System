@@ -6,7 +6,7 @@ class Category(models.Model):
     """category models,this has a tree structure using foriegn key.
     the name is unique"""
     name = models.CharField(max_length=250, unique=True, help_text="category name,name must be unique")
-    parent_category = models.ForeignKey('Category', null=True, on_delete=models.CASCADE)
+    parent_category = models.ForeignKey('Category', null=True,blank=True, on_delete=models.CASCADE)
     date_created = models.DateTimeField(auto_now_add=True, help_text="this was created at starting")
     last_modified = models.DateTimeField(auto_now_add=True, help_text="this was created whn modified last")
 
@@ -50,10 +50,10 @@ class Product(models.Model):
 class Specifications(models.Model):
     """specifications models,about the product specifications"""
     key = models.CharField(max_length=250, unique=True, help_text="the key of specification")
-    vale = models.CharField(max_length=250, unique=True, help_text="the value of specification")
+    value = models.CharField(max_length=250, unique=True, help_text="the value of specification")
     unit = models.CharField(max_length=250, null=True, unique=True, help_text="the unit of specification")
     date_created = models.DateTimeField(auto_now_add=True, help_text="this was when brand created")
     last_modified = models.DateTimeField(auto_now_add=True, help_text="this was created when modified last")
 
     def __str__(self):
-        return self.key + ' ,' + self.value + (' ' + self.unit if + self.unit else ' ')
+        return self.key + ' ,' + self.value + (' ' + self.unit if  self.unit else ' ')
