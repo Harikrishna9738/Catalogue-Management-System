@@ -1,12 +1,10 @@
 # Catalogue
 
-# HRMS
-
 This project contains the catalogue management system,which include the django models and rest API's
 
 
 
-# Prerequisites
+## Prerequisites
 
 You need to install the following packages for backend:
 ```
@@ -19,7 +17,7 @@ psycopg2==2.8.4
 pytz==2019.3
 sqlparse==0.3.0
 ```
-Installing
+## Installation
 
 Clone the repository
 ```
