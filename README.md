@@ -21,7 +21,7 @@ sqlparse==0.3.0
 
 Clone the repository
 ```
-https://github.com/Harikrishna9738/CabAllocationSystem
+https://github.com/Harikrishna9738/Catalogue-Management-System
 ```
 Setting up your virtual environment:
 ```
@@ -31,3 +31,17 @@ Activate the Virtual Environment:
 ```
 source .env/bin/activate
 ```
+To run the migrations
+```
+python3 manage.py makemigartions
+```
+To migrate the project
+```
+python3 manage.py migrate
+```
+To run the project
+```
+python3 manage.py runserver
+
+```
+
