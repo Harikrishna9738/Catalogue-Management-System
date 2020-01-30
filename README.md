@@ -1,4 +1,4 @@
-# Catalogue
+# Catalogue-Management-System
 
 This project contains the catalogue management system,which include the django models and rest API's
 
